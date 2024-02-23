@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header #logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header #navbar-mobile__button {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  z-index: 5;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+header #navbar-mobile__button div:first-child {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s;
+}
+header #navbar-mobile__button div:first-child.rotate-down {
+  transform: rotateZ(45deg);
+  transform-origin: 1px;
+  height: 2px;
+  width: 140%;
+}
+header #navbar-mobile__button div:nth-child(2) {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s;
+}
+header #navbar-mobile__button div:nth-child(2).hide {
+  transform: translateX(-100%);
+}
+header #navbar-mobile__button div:last-child {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s;
+}
+header #navbar-mobile__button div:last-child.rotate-up {
+  transform: rotateZ(-45deg);
+  transform-origin: 1px;
+  width: 140%;
+  height: 2px;
+}
+header #navbar-std {
+  display: none;
+}
+header #navbar-mobile {
+  position: absolute;
+  width: 40%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  transition: all 0.5s ease-out;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(5.5px);
+  -moz-backdrop-filter: blur(5.5px);
+  backdrop-filter: blur(5.5px);
+  border-left: 1px solid black;
+}
+header #navbar-mobile .navbar__list {
+  list-style: none;
+}
+header #navbar-mobile .navbar__list .navbar__item {
+  margin-bottom: 1rem;
+}
+header #navbar-mobile .navbar__list .navbar__item .navbar__link {
+  margin-bottom: 2rem;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: inherit;
+}
+header #navbar-mobile.visible {
+  right: -100%;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-container {
+  width: 100%;
+  height: 40rem;
+  margin-top: 2rem;
+  background-image: url(/src/assets/peer.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  width: 100%;
+  height: 1500px;
+}
+
+.hidden {
+  display: none;
+}
+
+.test {
+  width: 10rem;
+  height: 10rem;
+  background-color: red;
+}
+
+/*# sourceMappingURL=app.css.map */

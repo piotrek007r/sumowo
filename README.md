@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<ul className="navbar__list">
+          {navBarItems.map((item) => (
+            <li className="navbar__item">
+              <Link className="navbar__link">{item}</Link>
+            </li>
+          ))}
+        </ul>
